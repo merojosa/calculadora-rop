@@ -14,6 +14,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
+		"@types/nightmare": "^2.10.6",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"eslint": "^8.28.0",
@@ -30,7 +31,6 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-netlify": "^1.0.0",
-		"chrome-aws-lambda": "^10.1.0",
-		"puppeteer-core": "^19.4.0"
+		"nightmare": "^3.0.2"
 	}
 }
