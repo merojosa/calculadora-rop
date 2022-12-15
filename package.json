@@ -30,6 +30,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-netlify": "^1.0.0",
-		"puppeteer": "^19.4.0"
+		"chrome-aws-lambda": "^10.1.0",
+		"puppeteer-core": "^19.4.0"
 	}
 }

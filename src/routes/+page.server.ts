@@ -1,7 +1,13 @@
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
+import chromium from 'chrome-aws-lambda';
 
 export const load = async () => {
-	const browser = await puppeteer.launch();
+	const path = await chromium.executablePath;
+	const browser = await puppeteer.launch({
+		args: chromium.args,
+		executablePath: path,
+		headless: true
+	});
 	const page = await browser.newPage();
 
 	await page.goto(
@@ -37,6 +43,7 @@ export const load = async () => {
 
 	const content = rawData;
 
+	await browser.close();
 	return {
 		content
 	};
