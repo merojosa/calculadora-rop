@@ -2,7 +2,7 @@ import Nightmare from 'nightmare';
 
 const loadContent = () => {
 	return new Promise((resolve) => {
-		const nightmare = new Nightmare();
+		const nightmare = new Nightmare({ electronPath: require('electron') });
 		nightmare
 			.goto(
 				'https://webapps.supen.fi.cr/portal/stats/category1and3/serierentabilidadporrangos.aspx'
